@@ -1,4 +1,17 @@
+## Git LFS and Unity Project Setup
+
+1. **Navigate to the Git repository** folder.
+2. **Right-click in the folder** and select **“Git Bash Here”** to open Git Bash.
+3. Run the following commands to install Git LFS and track specific file types:
+   ```bash
+   git lfs install
+   git lfs track "*.psd"
+   ```
+4. After running these commands, a `.gitattributes` file will be created in the repository.
+5. Open `.gitattributes` and add the following configuration:
+
 ```gitconfig
+
 ## Unity ##
 
 *.cs diff=csharp text
@@ -56,3 +69,5 @@
 *.reason filter=lfs diff=lfs merge=lfs -text
 *.lxo filter=lfs diff=lfs merge=lfs -text
 ```
+
+
